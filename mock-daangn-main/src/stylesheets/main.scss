@@ -1,0 +1,41 @@
+@import 'toolbar.scss';
+
+$toolbarHeight : 50px;
+$bottomNavigationHeight : 55px;
+$floatingButtonSize : 50px;
+$floatingButtonMargin : 15px;
+
+#main {
+    display: grid;
+    height: 100%;
+    grid-template-rows: $toolbarHeight 1fr $bottomNavigationHeight;
+}
+
+.list {
+    overflow: auto;
+}
+
+.bottom-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.floating-button {
+    position: fixed;
+    width: $floatingButtonSize;
+    height: $floatingButtonSize;
+    padding: 0;
+    margin: 0;
+    border: 0px;
+    right: $floatingButtonMargin;
+    bottom: $floatingButtonMargin + $bottomNavigationHeight;
+    background: rgba(255, 255, 255, 0);
+    
+    img {
+        width: $floatingButtonSize;
+        height: $floatingButtonSize;
+        border-radius: $floatingButtonSize;
+        box-shadow: 0px 3px 4px rgba(133, 133, 133, 0.5);
+
+    }
+}

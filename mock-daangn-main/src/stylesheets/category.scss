@@ -1,0 +1,9 @@
+@import 'toolbar.scss';
+
+$toolbarHeight : 50px;
+
+#category {
+    display: grid;
+    height: 100%;
+    grid-template-rows: $toolbarHeight 1fr;
+}

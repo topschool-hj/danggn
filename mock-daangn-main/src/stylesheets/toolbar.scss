@@ -1,0 +1,51 @@
+$divideLineColor : rgb(231, 231, 231);
+$iconSize : 18px;
+
+.toolbar {
+    display: grid;
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: white;
+    border-bottom: 0.1px solid $divideLineColor;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 17px;
+    font-weight: 600;
+
+    &--left {
+        display: flex;
+        margin-left: 20px;
+        align-items: center;
+
+        &--item {
+            width: $iconSize;
+            height: fit-content;
+        }
+    }
+    &--title {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    &--right {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+        justify-content: center;
+        align-items: center;
+
+        &--item {
+            width: $iconSize;
+            margin-left: 16px;
+            height: fit-content;
+        }
+    }
+}
+
+.transparent {
+    background-color: rgb(255, 255, 255, 0);
+    border-bottom: 0;
+}
